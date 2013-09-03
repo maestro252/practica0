@@ -16,7 +16,7 @@ vector<string> datos;
 
 /* 
  * El método lecturaDeDocumento recíbe el archivo que será ordenado y lo pone 
- * en el vector datos
+ * en el vector datos que a futuro sera modificado para que quede ordenado
  */
 void lecturaDeDocumento (){
 FILE *archivo; //Archivo que se va a ordenar    
