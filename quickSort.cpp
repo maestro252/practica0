@@ -1,6 +1,6 @@
 
 /*
- * @author: Carolina Arcos Prats y Jonathan Eidelman
+ * @author: Carolina Arcos Prats y Jonathan Eidelman Manevich
  * @version: Agosto de 2013
  */
 #include <iostream>
