@@ -22,8 +22,8 @@ void lecturaDeDocumento (){
 FILE *archivo; //Archivo que se va a ordenar    
     string linea;
     int i=0;
-    archivo = fopen("1.txt", "r"); //Se abre el archivo
-    ifstream palabra("1.txt");
+    archivo = fopen("3.txt", "r"); //Se abre el archivo
+    ifstream palabra("3.txt");
     if (archivo==NULL) { /*Si el archivo no existe o no se pudo abrir, se emite
                           * el mensaje Error al abrir el archivo*/
         cout << ("Error al abrir el archivo") << endl;
@@ -85,10 +85,12 @@ void ubicarCorrecto(int inicial, int longitud) // funcion encargada de hacer que
 void crearHeap(int inicial, int longitud) //esta funcion se encarga de crear la estructura del heap dentro del arreglo
 											// y con ayuda de la funcion ubicarCorrecto la vuelve valida
 {
-    int mitad = (longitud - inicial -1)/2; //al comenzar por el elemento de la mitad, esta empezando por el padre
+  int mitad = (longitud - inicial -1)/2; //al comenzar por el elemento de la mitad, esta empezando por el padre
     										// cuyo hijo izquierdo o derecho sera el ultimo elemento del arbol binario,
     										// es decir esta creando el arbol binario desde la ultima rama en forma inversa
-    										//hasta la raiz
+   										//hasta la raiz
+  //int mitad = longitud - 1 se puede hacer asi, e igual quedaria ordenado, no hay diferencia alguna, salvo que en el primer caso
+  //ordena primero la mitad y despues ingresa uno por uno, y en este ordenada todos en un solo paso. 
     while (mitad >= 0)
     {
         ubicarCorrecto(mitad, longitud);	// se efectuan los cambios necesarios para que el orden sea apropiado
